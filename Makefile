@@ -7,12 +7,13 @@ LDFLAGS  =
 TARGET   = payload
 FORMAT   = elf64
 
+SRCS     = payload.S
 Q        = @
 
 all: payload shellcode
 
 payload:
-	$(Q) $(ASM) -f $(FORMAT) payload.S $(ASMFLAGS)
+	$(Q) $(ASM) -f $(FORMAT) $(SRCS) $(ASMFLAGS)
 	$(Q) $(LD) payload.o -o $(TARGET) $(LDFLAGS)
 
 shellcode: $(TARGET)
