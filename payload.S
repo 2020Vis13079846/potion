@@ -1,3 +1,11 @@
+;
+;  payload.S
+;  Gat3Pwn
+;
+;  Created by The Gate Group on 2020.
+;  Copyright © 2020 The Gate Group. All rights reserved.
+;
+
 section .text
 global _start
 _start:
