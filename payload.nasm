@@ -1,6 +1,6 @@
 ;
 ;  payload.nasm
-;  Gat3Pwn
+;  GateCode
 ;
 ;  Created by The Gate Group on 2020.
 ;  Copyright © 2020 The Gate Group. All rights reserved.
