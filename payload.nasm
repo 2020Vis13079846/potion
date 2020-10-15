@@ -1,5 +1,5 @@
 ;
-;  payload.S
+;  payload.nasm
 ;  Gat3Pwn
 ;
 ;  Created by The Gate Group on 2020.
