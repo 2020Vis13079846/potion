@@ -15,8 +15,8 @@ _start:
 	 xor edx, edx       ; zero initialize edx
 	 syscall            ; call execve
 
+section .rodata
 align 8
 args dq cmd, arg1, 0
-
 arg1 db '-i', 0
 cmd  db '/bin/sh', 0
