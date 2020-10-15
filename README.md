@@ -1,15 +1,15 @@
-# Gat3Pwn
+# GateCode
 
 *universal method of executing system payloads*
 
-Gat3Pwn is a method of executing system payloads through shellcodes.
+GateCode is a method of executing system payloads through shellcodes.
 
 ## Explaining
 
 ```nasm
 ;
 ;  payload.nasm
-;  Gat3Pwn
+;  GateCode
 ;
 ;  Created by The Gate Group on 2020.
 ;  Copyright © 2020 The Gate Group. All rights reserved.
