@@ -17,4 +17,7 @@ payload:
 	$(Q) $(LD) payload.o -o $(TARGET) $(LDFLAGS)
 
 shellcode: $(TARGET)
-	objdump -d ./$(TARGET)|grep '[0-9a-f]:'|grep -v 'file'|cut -f2 -d:|cut -f1-6 -d' '|tr -s ' '|tr '\t' ' '|sed 's/ $//g'|sed 's/ /\\x/g'|paste -d '' -s |sed 's/^/"/'|sed 's/$/"/g'
+	$(Q) objdump -d ./$(TARGET) | gxtractor
+
+strace: $(TARGET)
+	$(Q) strace ./$(TARGET)
