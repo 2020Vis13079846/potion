@@ -19,5 +19,5 @@ payload:
 shellcode: $(TARGET)
 	$(Q) objdump -d ./$(TARGET) | gxtractor
 
-strace: $(TARGET)
+debug: $(TARGET)
 	$(Q) strace ./$(TARGET)
