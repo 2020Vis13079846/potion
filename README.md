@@ -12,7 +12,7 @@ GateCode uses Linux `execve()` system call that allows you to execute filename.
 int execve(const char *filename, char *const argv[], char *const envp[]);
 ```
 
-GateCode fill this function like this, it uses file `/bin/sh` with option `-c` to execute system commands.
+GateCode fills this function like this, it uses file `/bin/sh` with option `-c` to execute system commands.
 
 ```c
 int execve("/////bin/sh", ["/////bin/sh", "-c", cmd], NULL);
@@ -102,4 +102,10 @@ make payload
 
 ```
 make shellcode
+```
+
+**Get debug:**
+
+```
+make debug
 ```
