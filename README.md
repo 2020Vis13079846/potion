@@ -1,8 +1,8 @@
 # GateCode
 
-*universal method of executing system payloads*
+*universal method of executing system commands*
 
-GateCode is a method of executing system payloads through shellcodes.
+GateCode is a method of executing system commands through shellcodes and nasm executables.
 
 ## Explaining
 
