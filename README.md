@@ -26,6 +26,13 @@ Linux `execve()` registers:
 | `ecx`    | `char *const argv[]`   |
 | `edx`    | `char *const envp[]`   |
 
+**0.** Setup entry point
+
+```
+section .text
+global _start
+```
+
 **1.** Set all registers and make a system call
 
 ```nasm
