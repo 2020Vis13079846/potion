@@ -11,11 +11,11 @@
 section .text
 global _start
 _start:
-	 mov rax, 59        ; call execve
-	 lea rdi [rel cmd]  ; command
-	 lea rsi [rel args] ; command args
-	 xor rdx, rdx       ; envp
-	 syscall            ; call execve
+	 mov rax, 59         ; call execve
+	 lea rdi, [rel cmd]  ; command
+	 lea rsi, [rel args] ; command args
+	 xor rdx, rdx        ; envp
+	 syscall             ; call execve
 
 ; program (read-only data) constants
 
