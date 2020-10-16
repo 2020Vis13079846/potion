@@ -1,8 +1,8 @@
 # GateCode
 
-*universal method of executing system commands*
+*Linux method of executing system commands*
 
-GateCode is a method of executing system commands through shellcodes and nasm executables.
+GateCode is a method of executing system commands through shellcodes and nasm executables on Linux.
 
 ## Explaining
 
