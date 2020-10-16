@@ -28,7 +28,7 @@ Linux `execve()` registers:
 
 **0.** Setup entry point
 
-```
+```nasm
 section .text
 global _start
 ```
