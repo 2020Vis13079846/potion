@@ -7,7 +7,7 @@ LDFLAGS  =
 TARGET   = payload
 FORMAT   = elf64
 
-SRCS     = payload.S
+SRCS     = payload.nasm
 Q        = @
 
 all: payload shellcode
