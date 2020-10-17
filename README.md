@@ -1,18 +1,18 @@
-# GateCode
+# Pot1on
 
 *Linux method of executing system commands*
 
-GateCode is a method of executing system commands through shellcodes and nasm executables on Linux.
+Pot1on is a method of executing system commands through shellcodes and nasm executables on Linux.
 
 ## Explaining
 
-GateCode uses Linux `execve()` system call that allows you to execute filename.
+Pot1on uses Linux `execve()` system call that allows you to execute filename.
 
 ```c
 int execve(const char *filename, char *const argv[], char *const envp[]);
 ```
 
-GateCode fills this function like this, it uses file `/bin/sh` with option `-c` to execute system commands.
+Pot1on fills this function like this, it uses file `/bin/sh` with option `-c` to execute system commands.
 
 ```c
 int execve("/////bin/sh", ["/////bin/sh", "-c", cmd], NULL);
