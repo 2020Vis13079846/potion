@@ -1,17 +1,25 @@
+/*
+* execve(const char *filename, char *const argv[], char *const envp[])
+* rdi   ->      const char *filename
+* rsi   ->      char *const argv[]
+* rdx   ->      char *const envp[]
+*/
+
 .section .data
-cmd: .string "/bin/sh"
+cmd:    .string "/bin/sh"               /* command string */
+hand:   .string "-c"                    /* command arguments string */
+args:   .string "ls -al"                /* arguments string */
+argv:   .quad cmd                       /* array of command, command arguments and arguments */
+        .quad hand
+        .quad args
+        .quad 0
 
 .section .text
 .globl _start
 _start:
-        pushq   $0              ; empty stack
-        pushq   cmd             ; save cmd to rsp
-        
-        movq    $59,    %rax    ; call execve system call
-        movq    %rsp,   %rdi    ; save rsp to rdi
-        
-        pushq   $0              ; empty stack
-        movq    %rsp,   %rsi    ; save rsp to rsi
-        movq    %rsp,   %rdx    ; save rsp to rdx
-        
-        syscall                 ; make system call
+        movq    $59,            %rax    /* call execve system call */
+        leaq    cmd(%rip),      %rdi    /* save command to rdi */
+        leaq    argv(%rip),     %rsi    /* save args to rsi */
+        movq    $0,             %rdx    /* save NULL to rdx */
+
+        syscall                         /* make system call */
